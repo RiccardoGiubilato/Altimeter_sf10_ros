@@ -1,0 +1,13 @@
+<launch>
+
+	<!-- definition of serial port -->
+	<param name="serial_port_alti" value="/dev/ttyUSB0" />
+	
+	<!-- transform between world and alti frame
+	<node pkg="tf" type="static_transform_publisher" name="alti_tf" args="0 0 0 0 0 0 /world /alti 100" /-->
+	
+	<!-- launch altimeter node -->
+	<node pkg="altimeter_sf10" type="altimeter_sf10_node" name="alti_node" />
+
+
+</launch>
